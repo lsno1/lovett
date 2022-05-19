@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<title>唯爱甜甜</title>
+	<link rel="icon" href="./img/logo_32.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./img/logo_32.ico" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" media="screen"/>
+    <meta name="keywords" content=""/>
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+          content=
+"人品，需要用陪伴去检验
+所以，在这个特别的日子里，我想问
+甜甜，你愿意做我的女朋友吗
+我希望你的回答，是 “YES” or “NO”
+而不是中间的答案
+如果你的回答是 “YES”
+我将用尽我全部的能量
+陪伴你、尊重你、欣赏你、呵护你
+如果你的回答是 “NO”
+我亦祝你幸福，此生不再打扰"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/js.js"></script>
+</head>
+<body id="bgc">
+<script type="text/javascript" src="js/main.js"></script>
+<div class="mb-box">
+    <div class="bb">
+        <h2>终于人品</h2>
+        <div class="bb_text">
+            <div id="code">
+人品，需要用陪伴去检验<br/>
+所以，在这个特别的日子里，我想问<br/>
+甜甜，你愿意做我的女朋友吗<br/>
+我希望你的回答，是 “YES” or “NO”<br/>
+而不是中间的答案<br/>
+如果你的回答是 “YES”<br/>
+我将用尽我全部的能量<br/>
+陪伴你、尊重你、欣赏你、呵护你<br/>
+如果你的回答是 “NO”<br/>
+我亦祝你幸福，此生不再打扰<br/>
+YOUR ANSWER: 
+<a href="page2/index.html" id="accept">YES</a>
+<a href="page3/index.html" id="accept">NO</a>
+            </div>
+        </div>
+        <p class="bb_myname">
+    </div>
+</div>
+
+<script>
+    Element.prototype.typewriter = function (a) {
+        var d = this,
+            c = d.innerHTML,
+            b = 0;
+        d.innerHTML = "";
+        var e = setInterval(function () {
+            var f = c.substr(b, 1);
+            if (f == "<") {
+                b = c.indexOf(">", b) + 1
+            } else {
+                b++
+            }
+            d.innerHTML = c.substring(0, b) + (b & 1 ? "_" : "");
+            if (b >= c.length) {
+                clearInterval(e)
+            }
+        }, 150)
+        return this
+
+    }
+    document.getElementById("code").typewriter();
+</script>
+<div style="display:none">
+    <script type="text/javascript">
+        var cpro_id = "u2782220";
+    </script>
+    <script type="text/javascript" src="js/c.js"></script>
+</div>
+<div style="display:none">
+    <script type="text/javascript">
+        /*677*250 创建于 Sun Oct 06 2017*/
+        var cpro_id = "u2782229";
+    </script>
+    <script type="text/javascript" src="js/c.js"></script>
+</div>
+<link rel="stylesheet" href="css/cuplayer.css">
+<div style="position:absolute; top:50px; right:50px;">
+    <audio id="main_audio" autoplay="autoplay" preload="auto" loop>
+        <source src="song.mp3" type="audio/mpeg"/>
+    </audio>
+    <a class="c-white fs-12 icon-play rotate" id="btn-play" href="javascript:void(0);"></a>
+</div>
+
+<script type="text/javascript">
+    //获取picid函数
+    $(function () {
+        $("area").click(function () {
+            var picId = $(this).attr("data-id");
+            var picSrc = "./img/img_big/" + picId + ".jpg"
+            $(".modal-content>.pic-box>img").attr("src", picSrc);
+        })
+        var isPlaying = function (audio) {
+            return !audio.paused;
+        }
+        var a = document.getElementById('main_audio');
+        if (!(a.play instanceof Function)) {
+            a = document.getElementById('main_audio_ie8');
+            isPlaying = function (audio) {
+                return audio.playState == 2;
+            }
+        }
+        $('#btn-play').on('click', function () {
+            if ($(this).hasClass('rotate')) {
+                a.pause();
+                $(this).removeClass('rotate');
+            } else {
+                a.play();
+                $(this).addClass('rotate');
+            }
+        });
+
+    })
+</script>
+
+
+</body>
+</html>
